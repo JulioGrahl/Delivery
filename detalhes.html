@@ -5,123 +5,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hambúrguer Artesanal - Lanches Fast</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="detalhamento.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top Bar (mesmo do original) -->
+    <!-- Top Bar -->
     <div class="top-bar">
-        <!-- ... -->
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> (11) 9999-9999</span>
+                <span><i class="fas fa-envelope"></i> contato@lanchesfast.com</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
     </div>
 
-    <!-- Header (mesmo do original) -->
+    <!-- Cabeçalho -->
     <header>
-        <!-- ... -->
+        <nav class="container">
+            <div class="logo">
+                <h1 class="h1_logo">Lanches Fast</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Cardápio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" class="btn-pedido"><i class="fas fa-shopping-bag"></i> Faça seu pedido</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
     </header>
 
-    <!-- Conteúdo do Catálogo -->
-    <main class="product-catalog">
-        <a href="produtos.html" class="back-to-menu">
-            <i class="fas fa-arrow-left"></i> Voltar ao Cardápio
-        </a>
-        
-        <div class="product-card">
-            <div class="product-images">
-                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                     alt="Hambúrguer Artesanal" class="main-image" id="mainImage">
-                
-                <div class="thumbnail-grid">
+    <!-- Conteúdo Principal -->
+    <main class="detalhes-produto">
+        <div class="container">
+            <a href="produtos.html" class="voltar-link">
+                <i class="fas fa-arrow-left"></i> Voltar ao Cardápio
+            </a>
+            
+            <div class="produto-galeria">
+                <div class="imagem-principal">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Hambúrguer Artesanal" id="imagemPrincipal">
+                </div>
+                <div class="miniaturas">
                     <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
-                         class="thumbnail" 
-                         onclick="document.getElementById('mainImage').src = this.src">
-                         
+                         class="miniatura ativa" 
+                         onclick="trocarImagem('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
                     <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
-                         class="thumbnail" 
-                         onclick="document.getElementById('mainImage').src = this.src">
-                         
+                         class="miniatura" 
+                         onclick="trocarImagem('https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
                     <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
-                         class="thumbnail" 
-                         onclick="document.getElementById('mainImage').src = this.src">
+                         class="miniatura" 
+                         onclick="trocarImagem('https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">
                 </div>
             </div>
-            
-            <div class="product-info">
-                <h1 class="product-title">Hambúrguer Artesanal Clássico</h1>
+
+            <div class="produto-info">
+                <span class="categoria">Hambúrguer Artesanal</span>
+                <h1>Clássico Fast</h1>
                 
-                <div class="product-price">R$ 24,90</div>
-                
-                <p class="product-description">
-                    Nosso carro-chefe! Pão brioche artesanal, hambúrguer de 180g feito com blend especial da casa, 
-                    queijo cheddar derretido, bacon crocante, alface fresca, tomate e nosso molho secreto. 
-                    Acompanha batata rústica temperada.
-                </p>
-                
-                <div class="product-features">
-                    <div class="feature">
-                        <i class="fas fa-fire"></i>
-                        <span>850 kcal - Serve 1 pessoa</span>
+                <div class="preco-avaliacao">
+                    <div class="preco">
+                        <span class="valor">R$ 24,90</span>
+                        <span class="original">R$ 29,90</span>
+                        <span class="desconto">-15%</span>
                     </div>
-                    <div class="feature">
-                        <i class="fas fa-clock"></i>
-                        <span>Preparo em 15 minutos</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-star"></i>
-                        <span>Avaliação: 4.8/5 (128 clientes)</span>
+                    <div class="avaliacao">
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>48 avaliações</span>
                     </div>
                 </div>
-                
-                <h3>Ingredientes Principais:</h3>
-                <ul>
-                    <li>Pão brioche artesanal</li>
-                    <li>Hambúrguer 180g (blend de fraldinha e costela)</li>
-                    <li>Queijo cheddar</li>
-                    <li>Bacon em tiras crocantes</li>
-                    <li>Alface americana fresca</li>
-                    <li>Tomate selecionado</li>
-                    <li>Molho especial da casa</li>
-                </ul>
-                
-                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de pedir o Hambúrguer Artesanal Clássico" 
+
+                <p class="descricao">
+                    Nosso carro-chefe! Pão brioche artesanal, hambúrguer de 180g feito com blend especial da casa, queijo cheddar derretido, bacon crocante, alface fresca, tomate e nosso molho secreto. Acompanha batata rústica temperada.
+                </p>
+
+                <div class="detalhes-adicionais">
+                    <div class="detalhe">
+                        <i class="fas fa-fire"></i>
+                        <span>850 kcal</span>
+                    </div>
+                    <div class="detalhe">
+                        <i class="fas fa-clock"></i>
+                        <span>Preparo: 15 min</span>
+                    </div>
+                    <div class="detalhe">
+                        <i class="fas fa-utensils"></i>
+                        <span>Serve 1 pessoa</span>
+                    </div>
+                </div>
+
+                <div class="ingredientes">
+                    <h3><i class="fas fa-list"></i> Ingredientes:</h3>
+                    <ul>
+                        <li>Pão brioche artesanal</li>
+                        <li>Hambúrguer 180g (blend de fraldinha e costela)</li>
+                        <li>Queijo cheddar</li>
+                        <li>Fatias de bacon</li>
+                        <li>Alface americana</li>
+                        <li>Tomate fresco</li>
+                        <li>Molho especial da casa</li>
+                    </ul>
+                </div>
+
+                <a href="https://wa.me/5511999999999?text=Olá! Gostaria de pedir o Hambúrguer Clássico Fast" 
                    class="whatsapp-btn">
                    <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
                 </a>
             </div>
         </div>
-        
-        <!-- Seção de produtos relacionados -->
-        <div class="related-products">
+    </main>
+
+    <!-- Produtos Relacionados -->
+    <section class="relacionados">
+        <div class="container">
             <h2>Você também pode gostar:</h2>
-            <div class="related-grid">
+            <div class="grade-relacionados">
                 <!-- Produto 1 -->
-                <div class="related-item">
+                <div class="card-relacionado">
                     <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
                          alt="Hambúrguer Bacon">
                     <h3>Bacon Crunch</h3>
-                    <p>R$ 28,90</p>
-                    <a href="produto-bacon.html">Ver detalhes</a>
+                    <p class="preco-relacionado">R$ 28,90</p>
+                    <a href="detalhes-bacon.html" class="btn-ver">Ver Detalhes</a>
                 </div>
                 
                 <!-- Produto 2 -->
-                <div class="related-item">
+                <div class="card-relacionado">
                     <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
                          alt="Hambúrguer Vegetariano">
                     <h3>Vegetariano Supreme</h3>
-                    <p>R$ 22,90</p>
-                    <a href="produto-vegetariano.html">Ver detalhes</a>
+                    <p class="preco-relacionado">R$ 22,90</p>
+                    <a href="detalhes-vegetariano.html" class="btn-ver">Ver Detalhes</a>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Rodapé (mesmo do original) -->
+    <!-- Rodapé -->
     <footer id="contato">
-        <!-- ... -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://via.placeholder.com/150x50?text=Lanches+Fast" alt="Lanches Fast" class="footer-logo">
+                    <p>Os melhores lanches da região, feitos com ingredientes frescos e selecionados.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Horário de Funcionamento</h3>
+                    <ul class="footer-links">
+                        <li><span>Segunda a Sexta:</span> 11h - 23h</li>
+                        <li><span>Sábado:</span> 11h - 00h</li>
+                        <li><span>Domingo:</span> 11h - 22h</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Cardápio</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Centro</li>
+                        <li><i class="fas fa-phone"></i> (11) 9999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@lanchesfast.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lanches Fast. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Botão WhatsApp Fixo (mesmo do original) -->
+    <!-- Botão WhatsApp Fixo -->
     <a href="https://wa.me/5511999999999" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script>
+        // Troca de imagens na galeria
+        function trocarImagem(src) {
+            document.getElementById('imagemPrincipal').src = src;
+            
+            // Remove a classe 'ativa' de todas as miniaturas
+            const miniaturas = document.querySelectorAll('.miniatura');
+            miniaturas.forEach(min => min.classList.remove('ativa'));
+            
+            // Adiciona a classe 'ativa' na miniatura clicada
+            event.target.classList.add('ativa');
+        }
+    </script>
 </body>
 </html>
