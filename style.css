@@ -50,8 +50,13 @@ a {
 }
 
 .btn-primary {
+    display: inline-block;
     background-color: var(--primary);
-    color: var(--light);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .btn-primary:hover {

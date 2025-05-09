@@ -3,51 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lanches Fast - Peça Seu Lanche!</title>
+    <title>Cardápio Completo - Lanches Fast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> (11) 9999-9999</span>
+                <span><i class="fas fa-envelope"></i> contato@lanchesfast.com</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Cabeçalho -->
     <header>
-        <nav>
-            <div class="logo">Lanches Fast</div>
+        <nav class="container">
+            <div class="logo">
+                <h1 class="h1_logo">Lanches Fast</h1>
+            </div>
             <ul class="menu">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Cardápio</a></li>
+                <li><a href="produtos.html" class="active">Cardápio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="#" class="btn-pedido"><i class="fas fa-shopping-bag"></i> Faça seu pedido</a></li>
             </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-    <!-- Carrossel de Banners (simplificado) -->
-    <section class="carrossel">
-        <div class="banner-ativo">
-            <img src="images/banner.jpg" alt="" class="banner_home">
+    <!-- Banner do Cardápio -->
+    <section class="hero hero-menu">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cardápio Completo</h1>
+                <p>Conheça todos os nossos lanches, bebidas e combos</p>
+            </div>
         </div>
     </section>
 
-    <section class="cardapio">
-        <H1>
-            Cardápio Completo
-        </H1>
+    <!-- Cardápio -->
+    <section class="full-menu">
+        <div class="container">
+            <!-- Categoria: Hambúrgueres -->
+            <div class="menu-category">
+                <h2><i class="fas fa-hamburger"></i> Hambúrgueres Artesanais</h2>
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Hambúrguer Clássico">
+                            <span class="price">R$ 24,90</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Clássico Fast</h3>
+                            <p>Pão brioche, hambúrguer 180g, queijo cheddar, alface, tomate e molho especial</p>
+                            <a href="#" class="btn-order">Pedir Agora</a>
+                        </div>
+                    </div>
 
-        <div class="produto">
-            
+                    <!-- Item 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Hambúrguer Bacon">
+                            <span class="price">R$ 28,90</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Bacon Crunch</h3>
+                            <p>Pão australiano, 2 hambúrgueres, bacon crocante, cebola caramelizada e molho barbecue</p>
+                            <a href="#" class="btn-order">Pedir Agora</a>
+                        </div>
+                    </div>
+
+                    <!-- Adicione mais itens conforme necessário -->
+                </div>
+            </div>
+
+            <!-- Categoria: Vegetarianos -->
+            <div class="menu-category">
+                <h2><i class="fas fa-leaf"></i> Opções Vegetarianas</h2>
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Hambúrguer Vegetariano">
+                            <span class="price">R$ 22,90</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Vegetariano Supreme</h3>
+                            <p>Pão integral, hambúrguer de grão-de-bico, abobrinha, berinjela e molho de iogurte</p>
+                            <a href="#" class="btn-order">Pedir Agora</a>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1596662951482-0c4ba74a6df6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Hambúrguer Vegetariano">
+                            <span class="price">R$ 22,90</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Vegetariano Supreme</h3>
+                            <p>Pão integral, hambúrguer de grão-de-bico, abobrinha, berinjela e molho de iogurte</p>
+                            <a href="#" class="btn-order">Pedir Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria: Bebidas -->
+            <div class="menu-category">
+                <h2><i class="fas fa-glass-whiskey"></i> Bebidas</h2>
+                <div class="menu-grid drinks-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item drink-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Refrigerante">
+                            <span class="price">R$ 8,90</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Refrigerante 500ml</h3>
+                            <p>Coca-Cola, Guaraná, Fanta ou Sprite</p>
+                            <a href="#" class="btn-order">Pedir Agora</a>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item drink-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Refrigerante">
+                            <span class="price">R$ 8,90</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Refrigerante 500ml</h3>
+                            <p>Coca-Cola, Guaraná, Fanta ou Sprite</p>
+                            <a href="#" class="btn-order">Pedir Agora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categoria: Combos -->
+            <div class="menu-category">
+                <h2><i class="fas fa-star"></i> Combos Especiais</h2>
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item combo-item">
+                        <div class="menu-item-image">
+                            <img src="https://vejasp.abril.com.br/wp-content/uploads/2020/07/Combo-NYC-para-4-com-Stella_Z-DELI_Lucas-Terribili-10.jpg?crop=1&resize=1212,909" alt="Combo Família">
+                            <span class="price">R$ 89,90</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Combo Família</h3>
+                            <p>4 hambúrgueres, 4 refrigerantes, 2 porções de batata e 1 molho extra</p>
+                            <a href="#" class="btn-order">Pedir Agora</a>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item combo-item">
+                        <div class="menu-item-image">
+                            <img src="https://vejasp.abril.com.br/wp-content/uploads/2020/07/Combo-NYC-para-4-com-Stella_Z-DELI_Lucas-Terribili-10.jpg?crop=1&resize=1212,909" alt="Combo Família">
+                            <span class="price">R$ 89,90</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Combo Família</h3>
+                            <p>4 hambúrgueres, 4 refrigerantes, 2 porções de batata e 1 molho extra</p>
+                            <a href="#" class="btn-order">Pedir Agora</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
         </div>
-
-
     </section>
-
-    <!-- Botão Fixo do WhatsApp -->
-    <a href="https://wa.me/5511999999999?text=Olá! Quero fazer um pedido." class="btn-whatsapp">
-        <div class="div_whatsapp">
-            <img src="https://img.icons8.com/?size=512&id=16713&format=png" alt="WhatsApp">
-        </div>
-    </a>
 
     <!-- Rodapé -->
     <footer id="contato">
-        <p>© 2024 Lanches Fast. Telefone: (11) 9999-9999</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="https://via.placeholder.com/150x50?text=Lanches+Fast" alt="Lanches Fast" class="footer-logo">
+                    <p>Os melhores lanches da região, feitos com ingredientes frescos e selecionados.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Horário de Funcionamento</h3>
+                    <ul class="footer-links">
+                        <li><span>Segunda a Sexta:</span> 11h - 23h</li>
+                        <li><span>Sábado:</span> 11h - 00h</li>
+                        <li><span>Domingo:</span> 11h - 22h</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Cardápio</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Centro</li>
+                        <li><i class="fas fa-phone"></i> (11) 9999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@lanchesfast.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lanches Fast. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Botão WhatsApp Fixo -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
